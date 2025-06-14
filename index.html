@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex AI</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="icon" href="favicon.ico" type="image/png" sizes="64x64">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <div class="topbar">
+        <a href="https://chatgpt.com/" target="__blank">
+            <img src="logo.png" class="logo">
+        </a>
+        <div class = "header">Flex AI</div>
+        <div class="top-links">
+            <input type="text" placeholder="Search..." id="search">
+            <a href="#">Help</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+        </div>
+    </div>
+
+    <!-- Second Navbar -->
+    <div class="secondbar">
+        <button onclick="toggleLeft()">☰</button>
+        <a href="#">Chat</a>
+        <a href="#">Code</a>
+        <a href="#">Voice</a>
+        <a href="#">Docs</a>
+    </div>
+
+    <!-- Left Toggle Sidebar -->
+    <div class="leftbar" id="leftbar">
+        <div class="links">
+            <a href="#">🧠 Playground</a>
+            <a href="#">📁 Projects</a>
+            <a href="#">📜 Prompt Library</a>
+            <a href="#">🧩 Extensions</a>
+            <a href="#">🛠️ Prompt Builder</a>
+            <a href="#">🕹️ Agents</a>
+            <a href="#">🔄 History</a>
+            <a href="#">💾 Saved Outputs</a>
+            <!-- Add more -->
+        </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="rightbar">
+        <a href="#">🪪 Profile</a>
+        <a href="#">⚙️ Settings</a>
+        <a href="#">📈 Model Usage</a>
+        <a href="#">🧬 Select Model</a>
+        <a href="#">🎨 Themes</a>
+        <a href="#">🔐 API Keys</a>
+        <a href="#">📋 Clipboard</a>
+        <a href="#">🚪 Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <h1>Topic-Name :</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora illo quibusdam voluptate iste. Hic fugit quis, repellat, labore magnam ullam ipsa numquam rerum sed earum distinctio, harum laborum eius!</p>
+    </div>
+
+    <div class="promptbar">
+        <button class="voice-btn">🎤</button>
+        <input type="text" placeholder="Ask Flex AI..." class="prompt-input">
+        <button class="doc-btn">➕</button>
+    </div>
+
+    <script>
+        window.onload = () => {
+            document.getElementById("leftbar").classList.add("collapsed");
+        }
+        function toggleLeft(){
+            let bar = document.getElementById("leftbar");
+            bar.classList.toggle("collapsed");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+body {
+    background-color : #202124;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    font-size: 2rem;          
+    font-weight: 800;            
+    letter-spacing: 2px;         
+    margin-left: 20px;           
+    background: linear-gradient(
+        90deg,
+        #7f00ff,
+        #e100ff,
+        #ff0080,
+        #ff8c00
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.promptbar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    background: #f8f8f8;
+    border-radius: 30px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+    align-items: center;
+}
+
+.prompt-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+}
+
+#search{
+    border : 2px solid black;
+    border-radius : 3rem;
+    font-weight : bold;
+}
+
+.voice-btn, .doc-btn {
+    background: #202124;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.voice-btn:hover, .doc-btn:hover {
+    opacity : 50%;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1c1c2e;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topbar .logo {
+    height: 45px;
+    margin-right: 15px;
+}
+
+.top-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.top-links input {
+    padding: 8px 15px;
+    border-radius: 2rem;
+    border: 2px solid #444;
+    background-color: #121212;
+    color: #fff;
+    outline: none;
+    font-size: 0.95rem;
+    width: 200px;
+}
+
+.top-links input::placeholder {
+    color: #aaa;
+}
+
+.top-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.top-links a:hover {
+    color: #ff8c00;
+    transform : translateY(5px);
+}
+
+.secondbar {
+    background: linear-gradient(90deg, #1f0036, #2c2c54);
+    position: sticky;
+    top: 64px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    gap: 3rem;
+    font-size: 1.5rem;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    z-index: 999;
+}
+
+.secondbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.secondbar a:hover {
+    transform: translateY(5px);
+    text-shadow: 0 0 5px rgba(255,255,255,0.6);
+}
+
+.leftbar {
+    position: fixed;
+    color: white;
+    top: 120px; 
+    left: 0;
+    background: #2b2b3c; 
+    width: 200px;
+    height: calc(100% - 120px); 
+    overflow-y: auto;
+    transition: 0.3s ease-in-out;
+    padding: 1rem;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+}
+
+.leftbar.collapsed {
+    transform: translateX(-200px);
+}
+
+.leftbar .links a {
+    display: block;
+    margin: 10px 0;
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.leftbar .links a:hover {
+    color: #ff8c00;  
+    transform: translateX(5px);
+}
+
+.rightbar {
+    position: fixed;
+    top: 120px; 
+    right: 0;
+    width: 180px;
+    background: #2f2f44;
+    padding: 1rem;
+    height: calc(100% - 120px);
+    border-left: 1px solid #444;
+    color: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.4);
+}
+
+.rightbar a {
+    display: block;
+    margin: 10px 0;
+    color: #ddd; 
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.rightbar a:hover {
+    color: #ff8c00;  
+    text-shadow: 0 0 6px #ff8c00;
+    transform: translateX(5px);
+}
+
+.main {
+    margin: 140px 220px 2rem 220px;
+    padding: 2rem;
+    color: white;
+    background: #2a2a36;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    min-height: 70vh; 
+    transition: all 0.3s ease;
+}
+
+.main h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff8c00; 
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.main p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0;
+    max-width: 800px;
+}
